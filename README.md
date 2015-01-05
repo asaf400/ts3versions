@@ -3,6 +3,8 @@ ts3versions
 
 This little tool generates a JSON-Object listing all available versions for the TeamSpeak3-Server.
 
+Mainly for use with [docker-teamspeak3@github](https://github.com/andreasheil/docker-teamspeak3) ([Docker](https://registry.hub.docker.com/u/aheil/teamspeak3-server/)).
+
 Usage:
 ------
 
