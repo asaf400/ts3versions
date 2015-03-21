@@ -4,6 +4,7 @@
 import lxml.html
 import json
 from distutils.version import LooseVersion
+from datetime import datetime
 
 baseurl = 'http://dl.4players.de/ts/releases/'
 data = {'latest': None, 'versions': []}
@@ -23,5 +24,6 @@ for element,attribute,rlink,pos in releases.iterlinks():
 
 data['versions'].sort(key=LooseVersion)
 data['latest'] = data['versions'][-1]
+data['checked'] = datetime.utcnow().strftime("%Y%m%d %H:%M:%S +0000 (UTC)")
 
 print json.dumps(data, sort_keys=True, indent=2)
